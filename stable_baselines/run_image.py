@@ -39,12 +39,9 @@ def make_env(gym_id, render=False):
 if __name__ == "__main__":
     # change to 1 for no multiprocessing
     env_id = "SuperMarioBros-7-3-v0"  # change to SuperMarioBros-3-4-v0 for other model provided
-    device = "cuda"  # use mps for mac or cpu if neither are available
+    model_location = ""
 
-    # uncomment to evaluate model
-    model = PPO.load(
-        "mario_image_7_3_1999680_steps.zip"
-    )  # to load custom model from path
+    model = PPO.load(model_location)
     env = DummyVecEnv([make_env(env_id, render=True)])
     state = env.reset()
     while True:
