@@ -1,5 +1,10 @@
 # super-mario-bros-rl
 
+
+
+https://github.com/nicodeas/super-mario-bros-rl/assets/77263595/9715b3ef-d875-48eb-bc42-b96b493602bf
+
+
 ## Introduction
 
 Super Mario Bros RL was initiated as an exploration into the fascinating world of reinforcement learning (RL). The goal of this project was to delve deeper into the principles and applications of RL, gaining experience in developing and implementing RL algorithms. Reinforcement learning algorithms such as Q-learning, Deep Q-learning (DQN), Double Deep Q-learning(DDQN) and Advantage Actor Critic(A2C) were explored before finally deciding to use Proximal Policy Optimisation(PPO). The reinforcment learning algorithms were explored in the exact order above. Other algorithms explored include a rule based agent and genetic algorithms. PPO code and a report on experiments carried out are provided in this repository.
