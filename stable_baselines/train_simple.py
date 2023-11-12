@@ -27,6 +27,7 @@ if __name__ == "__main__":
     num_processes = mp.cpu_count()  # 8 used in training
     env_id = "SuperMarioBros-1-1-v0"
     device = "cuda"  # use mps for mac or cpu if neither are available
+    num_training_steps = 2_000_000
 
     checkpoint_callback = CheckpointCallback(
         save_freq=max(50_000 // num_processes, 1),
@@ -53,7 +54,7 @@ if __name__ == "__main__":
         n_epochs=10,
         n_steps=512,
     )
-    model.learn(2_000_000, progress_bar=True, callback=checkpoint_callback)
+    model.learn(num_training_steps, progress_bar=True, callback=checkpoint_callback)
 
     # uncomment to evaluate model
     # model = PPO.load("<path to model>")  # to load custom model
