@@ -24,8 +24,7 @@ def make_env(gym_id, render=False):
 
 
 if __name__ == "__main__":
-    # change to 1 for no multiprocessing
-    num_processes = mp.cpu_count()
+    num_processes = mp.cpu_count()  # 8 used in training
     env_id = "SuperMarioBros-1-1-v0"
     device = "cuda"  # use mps for mac or cpu if neither are available
 

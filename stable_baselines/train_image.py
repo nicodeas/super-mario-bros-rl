@@ -39,15 +39,14 @@ def make_env(gym_id, render=False):
 
 
 if __name__ == "__main__":
-    # change to 1 for no multiprocessing
-    num_processes = mp.cpu_count()
+    num_processes = mp.cpu_count()  # 8 used in training
     env_id = "SuperMarioBros-7-3-v0"
     device = "cuda"  # use mps for mac or cpu if neither are available
 
     checkpoint_callback = CheckpointCallback(
         save_freq=max(50_000 // num_processes, 1),
-        save_path="./image_models_1_1",
-        name_prefix="mario_image_1_1",
+        save_path="./image_models_7_3",
+        name_prefix="mario_image_7_3",
     )
 
     if num_processes == 1:
